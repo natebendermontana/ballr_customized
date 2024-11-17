@@ -128,7 +128,7 @@ generate_hex_chart = function(hex_data, base_court, court_theme = court_themes$d
     stop("invalid metric")
   }
 
-  custom_colors <- c("#3878b8", "#f5f7f9", "#fffbce", "#f7ae5d", "#db1e16")
+  custom_colors <- c("#3878b8", "#8ecae6", "#fffbce", "#f7ae5d", "#db1e16")
   
   base_court +
     geom_polygon(
