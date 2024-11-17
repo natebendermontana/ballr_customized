@@ -1,3 +1,6 @@
+# user files
+.gitignore
+
 .Rapp.history
 .DS_Store
 rsconnect/
