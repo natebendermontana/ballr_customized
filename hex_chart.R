@@ -128,6 +128,8 @@ generate_hex_chart = function(hex_data, base_court, court_theme = court_themes$d
     stop("invalid metric")
   }
 
+  custom_colors <- c("#3878b8", "#f5f7f9", "#fffbce", "#f7ae5d", "#db1e16")
+  
   base_court +
     geom_polygon(
       data = hex_data$hex_data,
@@ -141,7 +143,8 @@ generate_hex_chart = function(hex_data, base_court, court_theme = court_themes$d
       size = court_theme$hex_border_size,
       color = court_theme$hex_border_color
     ) +
-    scale_fill_viridis_c(
+    scale_fill_gradientn(
+      colors = custom_colors,
       paste0(fill_label, "   "),
       limit = fill_limit,
       labels = label_formatter,
