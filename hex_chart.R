@@ -141,7 +141,7 @@ generate_hex_chart = function(hex_data, base_court, court_theme = court_themes$d
       size = court_theme$hex_border_size,
       color = court_theme$hex_border_color
     ) +
-    scale_fill_viridis_c(
+    scale_fill_viridis_b(
       paste0(fill_label, "   "),
       limit = fill_limit,
       labels = label_formatter,
