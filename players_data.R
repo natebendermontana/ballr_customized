@@ -71,6 +71,20 @@ default_season = rev(default_seasons)[default_season_ix]
 
 default_season_type = "Regular Season"
 
-player_photo_url = function(player_id) {
-  paste0("https://stats.nba.com/media/players/230x185/", player_id, ".png")
+# player_photo_url = function(player_id) {
+#   paste0("https://stats.nba.com/media/players/230x185/", player_id, ".png")
+# }
+
+library(hoopR)
+player_photo_url <- function(player_id) {
+  # Get the headshot URL using hoopR
+  headshot_url <- nba_playerheadshot(player_id)
+  
+  # Ensure the URL matches the expected format
+  if (grepl("png$", headshot_url)) {
+    return(headshot_url)
+  } else {
+    stop("The retrieved URL is not a PNG file.")
+  }
 }
+
