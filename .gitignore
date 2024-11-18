@@ -1,5 +1,6 @@
 # user files
 .gitignore
+data/
 
 .Rapp.history
 .DS_Store
